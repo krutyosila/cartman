@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('ref/{username}', ['as' => 'referral', 'middleware' => 'guest', 'uses' => 'HomeController@referer']);
+Route::get('', ['as' => 'home', 'uses' => 'HomeController@home']);
