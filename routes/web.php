@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', ['as' => 'home', 'uses' => 'HomeController@home']);
+Route::get('', ['as' => 'home', 'uses' => 'App\Http\Controllers\HomeController@home']);
