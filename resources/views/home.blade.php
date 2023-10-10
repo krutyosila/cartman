@@ -129,9 +129,14 @@
                 <tbody>
                 @foreach($products as $product)
                     <tr>
+                        <td colspan="10">
+                            {!!  dd($product->prices)  !!}
+                        </td>
+                    </tr>
+                    <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
                         <td class="text-right">
-                            <pre>{{ $product->prices->price->priceIncTax() }}</pre>
+                            <pre>{{ dd($product->prices) }}</pre>
                         </td>
                     </tr>
                 @endforeach
