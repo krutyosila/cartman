@@ -60,7 +60,7 @@
                     Bitcoin or Ethereum
                 </p>
                 <p>
-                    How to submit an order:
+                    How to submit an order: <b>cartmangear@proton.me</b>
                 </p>
                 <p>
                     3 x Testosterone Enanthate Noxy Labs 45$<br>
