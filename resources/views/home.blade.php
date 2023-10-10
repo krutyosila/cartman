@@ -129,15 +129,9 @@
                 <tbody>
                 @foreach($products as $product)
                     <tr>
-                        <td colspan="10">
-                            {{ $product->prices()->first()->price->value / 100 }}
-                            {{ $product->prices()->first()->currency->code }}
-                        </td>
-                    </tr>
-                    <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
                         <td class="text-right">
-                            <pre>{{ dd($product->prices) }}</pre>
+                            <pre>${{ $product->prices()->first()->price->value / 100 }}</pre>
                         </td>
                     </tr>
                 @endforeach
