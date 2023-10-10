@@ -109,7 +109,6 @@
             <table class="table table-bordered table-striped rounded">
                 <thead>
                 <tr>
-                    <th scope="col" class="col-1">#</th>
                     <th scope="col">Product</th>
                     <th scope="col" class="col-2 text-right">Price</th>
                 </tr>
@@ -117,9 +116,8 @@
                 <tbody>
                 @foreach($products as $product)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>{!! $product->translateAttribute('name') !!}</td>
-                        <td class="text-right">{{ $product->price?->price->formatted() }}</td>
+                        <td><small>{!! $product->translateAttribute('name') !!}</small></td>
+                        <td class="text-right"><pre>{{ $product->price?->price->formatted() }}</pre></td>
                     </tr>
                 @endforeach
                 </tbody>
