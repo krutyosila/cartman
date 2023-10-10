@@ -130,9 +130,7 @@
                 @foreach($products as $product)
                     <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
-                        <td class="text-right">
-                            <pre>${{ $product->prices()->first()->price->value / 100 }}</pre>
-                        </td>
+                        <td class="text-right"><small>${{ $product->prices()->first()->price->value / 100 }}</small></td>
                     </tr>
                 @endforeach
                 </tbody>
