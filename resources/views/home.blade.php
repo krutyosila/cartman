@@ -6,6 +6,13 @@
     <title>CartmanGear</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .list-group-item.active {
+            z-index: 2;
+            background-color: var(--bs-green);
+            border-color: var(--bs-green);
+        }
+    </style>
 </head>
 <body>
 <div class="container py-4">
