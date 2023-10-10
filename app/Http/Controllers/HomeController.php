@@ -12,11 +12,12 @@ use Lunar\Models\Product;
 class HomeController extends Controller
 {
 
-    public function home(Request $request, $brandId = null)
+    public function home(Request $request)
     {
         $brands = Brand::all();
         if($brandId != null) {
-            $products = Product::where('brand_id', $brandId)->get();
+            $brand = Brand::where('id', $request->get('brandId'))->firstOrFail();
+            $products = $brand->products;
         } else {
             $products = Product::all();
         }
