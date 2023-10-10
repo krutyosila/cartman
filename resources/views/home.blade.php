@@ -98,7 +98,7 @@
             <div class="list-group">
                 @foreach($brands as $brand)
                     <a href="{{ route('home', ['brandId' => $brand->id]) }}"
-                       class="d-flex align-items-center  list-group-item list-group-item-action">
+                       class="d-flex align-items-center list-group-item list-group-item-action {{ request()->get('brandId') == $brabd->id ? 'active' : '' }}">
                         <small>{{ $brand->name }}</small>
                         <small class="ms-auto">></small>
                     </a>
