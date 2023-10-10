@@ -15,11 +15,9 @@ class HomeController extends Controller
     public function home(Request $request, $brandId = null)
     {
         $brands = Brand::all();
-        $products = null;
         if($brandId != null) {
             $products = Product::where('brand_id', $brandId)->get();
-        }
-        if(!$products) {
+        } else {
             $products = Product::all();
         }
         return view('home', compact('brands', 'products'));
