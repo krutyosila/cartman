@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function home(Request $request)
     {
         $brands = Brand::all();
-        if($brandId != null) {
+        if(!empty($request->get('brandId'))) {
             $brand = Brand::where('id', $request->get('brandId'))->firstOrFail();
             $products = $brand->products;
         } else {
