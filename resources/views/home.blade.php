@@ -131,7 +131,7 @@
                     <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
                         <td class="text-right">
-                            <pre>{{ $product->prices->priceIncTax() }}</pre>
+                            <pre>{{ $product->prices->price->priceIncTax() }}</pre>
                         </td>
                     </tr>
                 @endforeach
