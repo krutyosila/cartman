@@ -130,6 +130,9 @@
             </table>
         </div>
     </div>
+    <div class="pt-2">
+        <small class="text-secondarty">cartmangear.co &copy; {{date('Y')}}</small>
+    </div>
 </div>
 @if(request()->get('brandId'))
     <script>
