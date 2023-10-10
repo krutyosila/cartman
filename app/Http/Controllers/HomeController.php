@@ -12,10 +12,16 @@ use Lunar\Models\Product;
 class HomeController extends Controller
 {
 
-    public function home()
+    public function home(Request $request, $brandId = null)
     {
         $brands = Brand::all();
-        $products = Product::all();
+        $products = null;
+        if($brandId != null) {
+            $products = Product::where('brand_id', $brandId)->get();
+        }
+        if(!$products) {
+            $products = Product::all();
+        }
         return view('home', compact('brands', 'products'));
     }
 }

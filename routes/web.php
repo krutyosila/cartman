@@ -14,3 +14,4 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('', ['as' => 'home', 'uses' => 'App\Http\Controllers\HomeController@home']);
+Route::get('{brandId}', ['as' => 'brand', 'uses' => 'App\Http\Controllers\HomeController@home']);

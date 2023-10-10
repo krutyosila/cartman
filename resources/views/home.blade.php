@@ -10,34 +10,122 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="#">Cartman<span style="color: var(--bs-orange)">Gear</span></a>
-        <!--
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
-        -->
+<div class="container py-4">
+    <div class="text-left pb-3">
+        <img src="{{ asset('logo.png') }}" alt="" style="width: 200px">
     </div>
-</nav>
-<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-5">
+            <div class="bg-light border-top p-3">
+                <h5>Welcome</h5>
+                <p>
+                    For questions or orders;
+                    <a href="mailto:cartmangear@proton.me">cartmangear@proton.me</a>
+                </p>
+                <b>Shipping:</b>
+                <p>
+                    We ship to the whole world. Currently we only ship internationally. Our domestic US and European
+                    warehouse will open soon
+                </p>
+                <p>
+                    <b class="text-danger">For United States:</b> We have a 95% successful delivery average to the
+                    United States. For
+                    undelivered goods we offer a refund or re-package.<br>
+                    Delivery time for the United States is 7-14 days
+                </p>
+                <p>
+                    <b class="text-primary">For Europe:</b>
+                    Our successful shipment average is about 70%. We offer refunds or reshipment for packages
+                    lost or caught in customs.<br>
+                    Average delivery time for all European countries is between 10-20 days
+                </p>
+                <p>Shipping cost. 20$</p>
+                <p>
+                    Only international shipping is active.
+                    1st and 2nd warehouse are independent
+                    from each other. If you want products
+                    from 2 different warehouses, you have
+                    to pay 2 shipping as 2 separate packages
+                    will be sent.
+                </p>
+                <p>
+                    For 1 warehouse, there is no shipping
+                    fee for orders of 250$ and more. For
+                    mixed 2 warehouses, there is no shipping
+                    fee for orders of 400$ and more.
+                </p>
+                <p>
+                    <b>Payment</b><br>
+                    We currently only accept payments in
+                    Bitcoin or Ethereum
+                </p>
+                <p>
+                    How to submit an order:
+                </p>
+                <p>
+                    3 x Testosterone Enanthate Noxy Labs 45$<br>
+                    1 x Genotropin 36iu Pfizer 120$<br>
+                    Shipping. 20$<br>
+                    Total.185$
+                </p>
+                <p>
+                    Name, Surname:<br>
+                    Street name and number:<br>
+                    Additional address information if required:<br>
+                    Postcode and city:<br>
+                    Country:<br>
+                    Phone number:
+                </p>
+                <p>
+                    From now on, please wait for a payment email within 24 hours. (Usually 1 hour)
+                </p>
+
+                <p class="text-success">
+                    <small>
+                        Warehouse International #1 ( Pharma Grade, Noxy Labs, True Pharmaceuticals)
+                    </small>
+                </p>
+                <p style="color: var(--bs-orange)">
+                    <small>
+                        Warehouse International #2 ( Balkan Pharma, Sp Laboratories)
+                    </small>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-2 py-2 py-lg-0">
+            <div class="list-group">
+                @foreach($brands as $brand)
+                    <a href="{{ route('home', ['brandId' => $brand->id]) }}"
+                       class="d-flex align-items-center  list-group-item list-group-item-action">
+                        <small>{{ $brand->name }}</small>
+                        <small class="ms-auto">></small>
+                    </a>
+                @endforeach
+            </div>
+        </div>
+        <div class="col-12 col-lg-5">
+            <table class="table table-bordered table-striped rounded">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-1">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col" class="col-2 text-right">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($products as $product)
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{!! $product->translateAttribute('name') !!}</td>
+                        <td class="text-right">{{ $product->price?->price->formatted() }}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 
 
