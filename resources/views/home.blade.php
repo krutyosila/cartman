@@ -138,7 +138,7 @@
     <script>
         setTimeout(function() {
             document.getElementById("products").scrollIntoView();
-        }, 300);
+        }, 10);
     </script>
 @endif
 </body>
