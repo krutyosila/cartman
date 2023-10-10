@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-2 py-2 py-lg-0">
-            <div class="list-group">
+            <div class="list-group rounded-0">
                 @foreach($brands as $brand)
                     <a href="{{ route('home', ['brandId' => $brand->id]) }}"
                        class="d-flex align-items-center list-group-item list-group-item-action {{ request()->get('brandId') == $brand->id ? 'active' : '' }}">
