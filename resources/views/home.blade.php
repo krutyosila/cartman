@@ -100,10 +100,10 @@
 
             </div>
         </div>
-        <div class="col-12 col-lg-2 py-2 py-lg-0">
+        <div class="col-12 col-lg-2 py-2 py-lg-0" id="#products">
             <div class="list-group rounded-0">
                 @foreach($brands as $brand)
-                    <a href="{{ route('home', ['brandId' => $brand->id]) }}"
+                    <a href="{{ route('home', ['brandId' => $brand->id]) }}#products"
                        class="d-flex align-items-center list-group-item list-group-item-action {{ request()->get('brandId') == $brand->id ? 'active' : '' }}">
                         <small>{{ $brand->name }}</small>
                         <small class="ms-auto">></small>
