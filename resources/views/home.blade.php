@@ -130,7 +130,7 @@
                 @foreach($products as $product)
                     <tr>
                         <td colspan="10">
-                            {!!  dd($product->prices[0]->)  !!}
+                            {!!  dd($product->prices)  !!}
                         </td>
                     </tr>
                     <tr>
