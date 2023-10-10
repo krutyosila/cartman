@@ -130,7 +130,7 @@
                 @foreach($products as $product)
                     <tr>
                         <td colspan="10">
-                            {!!  dd($product->prices()->first())  !!}
+                            {!!  dd($product->prices()->first()->price)  !!}
                         </td>
                     </tr>
                     <tr>
