@@ -13,6 +13,13 @@
             border-color: var(--bs-green);
         }
     </style>
+    @if(request()->get('brandId'))
+        <script>
+            document.getElementById('product').scrollIntoView({
+                behavior: 'smooth'
+            });
+        </script>
+    @endif
 </head>
 <body>
 <div class="container py-4">
@@ -124,7 +131,7 @@
                     <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
                         <td class="text-right">
-                            <pre>{{ $product->price?->price->formatted() }}</pre>
+                            <pre>{{ $product->prices }}</pre>
                         </td>
                     </tr>
                 @endforeach
