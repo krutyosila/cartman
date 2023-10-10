@@ -8,11 +8,10 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-
-
 <div class="container py-4">
     <div class="text-left pb-3">
-        <img src="{{ asset('logo.png') }}" alt="" style="width: 200px">
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('logo.png') }}" alt="" style="width: 200px"></a>
     </div>
     <div class="row">
         <div class="col-12 col-lg-5">
@@ -117,7 +116,9 @@
                 @foreach($products as $product)
                     <tr>
                         <td><small>{!! $product->translateAttribute('name') !!}</small></td>
-                        <td class="text-right"><pre>{{ $product->price?->price->formatted() }}</pre></td>
+                        <td class="text-right">
+                            <pre>{{ $product->price?->price->formatted() }}</pre>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
