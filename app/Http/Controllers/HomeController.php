@@ -11,16 +11,27 @@ use Lunar\Models\Product;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $brands = Brand::all();
+        View::share('brands', $brands);
+    }
 
     public function home(Request $request)
     {
-        $brands = Brand::all();
-        if(!empty($request->get('brandId'))) {
-            $brand = Brand::where('id', $request->get('brandId'))->firstOrFail();
-            $products = $brand->products;
+        if($request->get('brand')) {
+            $topBrand = Brand::where('id', $request->get('brand'))->firstOrFail();
+            $products = $topBrand->products;
         } else {
+            $topBrand = false;
             $products = Product::all();
         }
-        return view('home', compact('brands', 'products'));
+        return view('main', compact('topBrand','products'));
     }
+
+    public function products(Request $request, $brandID)
+    {
+        return view('products', compact('topBrand', 'products'));
+    }
+
 }
