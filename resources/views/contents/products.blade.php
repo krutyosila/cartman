@@ -10,7 +10,7 @@
             @endforeach
         </div>
     </div>
-    <div class="col-12 col-lg-9 pb-3">
+    <div class="col-12 col-lg-9 pb-3" id="products">
         @if(!empty($topBrand))
             <h6># {{ $topBrand->name }}</h6>
         @endisset
