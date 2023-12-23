@@ -110,7 +110,7 @@
                 </p>
 
                 <p class="text-success">
-                    Warehouse International #1 ( Pharma Grade, Noxy Labs, True Pharmaceuticals)
+                    Warehouse International #1 ( Pharma Grade, Noxy Labs)
                 </p>
                 <p style="color: var(--bs-orange)">
                     Warehouse International #2 ( Balkan Pharma, Sp Laboratories)
